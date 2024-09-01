@@ -1,7 +1,9 @@
 package task;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class KorolevEventTest {
     @Test
     public void eventTest_markEvent_success() {
@@ -11,4 +13,5 @@ public class KorolevEventTest {
         expected.unmarkTask();
         assertEquals(expected.toString(), "[E][ ] test (from: 00:00 Jan 1 2021 to: 01:01 Jan 2 2033)");
     }
+
 }

@@ -1,8 +1,10 @@
 package parser;
-import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
+
 public class DateParserTest {
     @Test
     public void byStatement_correctFormat_success() throws Exception {
@@ -21,8 +23,8 @@ public class DateParserTest {
                     "");
             fail();
         } catch (Exception e) {
-            assertEquals("Fail to extract information: Wrong format of dates"
-                    , e.getMessage());
+            assertEquals("Fail to extract information: Wrong format of dates",
+                    e.getMessage());
         }
     }
 
@@ -33,8 +35,8 @@ public class DateParserTest {
         assertEquals(DateParser.parseFrom("/from 2024-01-20"),
                 "2024-01-20T00:00");
         assertEquals(DateParser.parseFrom(
-                "/from 2023-11-20 22:03 /to 2023-11-21 23:00")
-                , "2023-11-20T22:03");
+                "/from 2023-11-20 22:03 /to 2023-11-21 23:00"),
+                "2023-11-20T22:03");
     }
 
     @Test
@@ -44,8 +46,8 @@ public class DateParserTest {
                         "");
             fail();
         } catch (Exception e) {
-            assertEquals("Fail to extract information: Wrong format of dates"
-                    , e.getMessage());
+            assertEquals("Fail to extract information: Wrong format of dates",
+                    e.getMessage());
         }
     }
 
@@ -66,8 +68,8 @@ public class DateParserTest {
                     "");
             fail();
         } catch (Exception e) {
-            assertEquals("Fail to extract information: Wrong format of dates"
-                    , e.getMessage());
+            assertEquals("Fail to extract information: Wrong format of dates",
+                    e.getMessage());
         }
     }
 
@@ -86,8 +88,8 @@ public class DateParserTest {
                     "");
             fail();
         } catch (Exception e) {
-            assertEquals("Fail to extract information: Wrong format of dates"
-                    , e.getMessage());
+            assertEquals("Fail to extract information: Wrong format of dates",
+                    e.getMessage());
         }
     }
 }

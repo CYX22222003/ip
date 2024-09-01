@@ -9,6 +9,9 @@ import task.KorolevTodo;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Handles all the description of different types of events
+ */
 public class EventParser {
     /**
      * Analyses the input string and extracts any substring appearing between
@@ -20,7 +23,7 @@ public class EventParser {
      * @return content between start and stop
      * @throws ParseException when cannot find any content with given start and stop
      */
-    public static String parseName(String start, String stop, String input)  throws ParseException {
+    public static String parseName(String start, String stop, String input) throws ParseException {
         Pattern pattern = Pattern.compile(start + "\\s+(.+)\\s*" + stop);
         Matcher matcher = pattern.matcher(input);
         if (matcher.find()) {

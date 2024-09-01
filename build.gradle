@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id 'checkstyle'
 }
 
 mainClassName = 'korolev.DukeKorolev'
@@ -9,6 +10,11 @@ mainClassName = 'korolev.DukeKorolev'
 repositories {
     mavenCentral()
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+checkstyle {
+    toolVersion = '10.2'
+    configFile = file('config/checkstyle/checkstyle.xml')
 }
 
 dependencies {
